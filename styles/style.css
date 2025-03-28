@@ -11,10 +11,9 @@ background-attachment: fixed;
 .header {
   position: relative;
   display: grid;
-  align-items: center;
-  grid-template-rows: 1fr;
   block-size: 100vh;
-
+  min-height: 668px;
+  margin-block-end: 30px;
 }
 
 .decorated-zone {
@@ -50,8 +49,8 @@ background-attachment: fixed;
   font-size: var(--main-text-size);
   line-height: 25px;
   justify-self: end;
-  margin-inline: 29px;
-  margin-block: 2px;
+  margin-inline: 38px;
+  margin-block: 9px;
 }
 
 .header_rec::after {
@@ -67,8 +66,11 @@ background-attachment: fixed;
 }
 
 .header__theme-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 padding-inline-end: 2px;
-
+padding-block-end: 56px;
 }
 
 .header__theme-menu-list {
@@ -77,7 +79,7 @@ padding-inline-end: 2px;
   gap: var(--main-gap);
   align-items: flex-end;
   list-style-type: none;
-  padding-block-end: 101px;
+
 
 }
 
@@ -88,8 +90,7 @@ padding-inline-end: 2px;
 .header__theme-menu-button {
   position: relative;
 display: block;
-  inline-size: 70px;
-  block-size: 26px;
+
 color: var(--accent-color);
 background-color: transparent;
 border: 1px solid transparent;
@@ -97,7 +98,8 @@ font-family: var(--main-font-family);
 font-size: var(--main-text-size);
 text-transform: lowercase;
 cursor: pointer;
-padding-block-end: 4px;
+
+padding: 1px 13px;
 }
 
 .header__theme-menu-button_active {
@@ -152,6 +154,7 @@ outline: none;
   color: var(--main-bg-color);
   background-color: var(--accent-color);
   font-size: var(--main-text-size);
+  font-family: var(--main-font-family);
   font-weight: bold;
 
 }
@@ -164,4 +167,8 @@ outline: none;
 .text-block__content {
   color: var(--main-text-color);
   font-size: var(--main-text-size);
+}
+
+.text-block__subtitle {
+  font-weight: normal;
 }
