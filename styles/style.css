@@ -13,7 +13,6 @@ background-attachment: fixed;
   display: grid;
   block-size: 100vh;
   min-height: 668px;
-  margin-block-end: 30px;
 }
 
 .decorated-zone {
@@ -28,7 +27,8 @@ background-attachment: fixed;
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
   justify-self: end;
-  margin-block: 2px;
+  margin-block: 10px;
+  margin-inline: 10px;
 }
 
 .decorated-zone::after {
@@ -79,6 +79,7 @@ padding-block-end: 56px;
   gap: var(--main-gap);
   align-items: flex-end;
   list-style-type: none;
+  padding-inline-end: 8px;
 
 
 }
@@ -135,12 +136,17 @@ outline: none;
   line-height: 82.5%;
   color: var(--header-logo-color);
   text-shadow: 4px 4px 0 var(--accent-color);
+  padding-inline-start: 10px;
+  padding-block-start: 12px;
 }
 
 .header__text {
   min-inline-size: 355px;
   min-block-size: 117px;
-  inline-size: 100%;
+  inline-size: 94%;
+  justify-self: end;
+  margin-block-end: 8px;
+  margin-inline-end: 10px;
 }
 
 .text__paragrath {
