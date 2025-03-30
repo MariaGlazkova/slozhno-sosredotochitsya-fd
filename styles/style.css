@@ -205,6 +205,11 @@ gap: 20px;
 
 }
 
+.text-block__list-item {
+  display: grid;
+
+}
+
 .text-block__list {
 
 }
