@@ -183,24 +183,30 @@ background-attachment: fixed;
   margin-bottom: 20px;
 }
 
+.text-blocks {
+display: grid;
+gap: 20px;
+}
+
+
 .text-block {
   display: grid;
+  gap: 10px;
 }
 
 .text-block__title {
   font-weight: 700;
-  margin-bottom: 10px;
 }
 
 
 .text-block__content {
   color: var(--main-text-color);
   font-size: var(--main-text-size);
-  margin-bottom: 20px;
+
 }
 
 .text-block__list {
-  margin-bottom: 20px;
+
 }
 
 .text-block__subtitle {
