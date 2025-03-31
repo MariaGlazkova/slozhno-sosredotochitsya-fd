@@ -1,79 +1,77 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-block-size: 100%;
-min-height: 100vh;
-background-image: var(--bg-image);
-background-color: var(--main-bg-color);
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center;
+  background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  block-size: 100%;
 }
 
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  position: relative;
-  block-size: 100vh;
-  min-height: 668px;
-  align-items: center;
   justify-items: end;
+  align-items: center;
+  width: 100%;
+  min-height: 668px;
   padding: var(--main-gap);
+  block-size: 100vh;
 }
 
 .decorated-zone {
   position: relative;
-
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
-  inline-size: 25px;
-	block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-  justify-self: end;
   top: 10px;
   right: 10px;
+  justify-self: end;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inline-size: 25px;
+	block-size: 25px;
 }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
   inline-size: 25px;
 	block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
   inset-inline-start: var(--main-gap);
   inset-block-end: var(--main-gap);
-
 }
 
 .header_rec {
   position: absolute;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  font-size: var(--main-text-size);
-  line-height: 25px;
-  justify-self: end;
-  margin-inline: 29px;
   top: 10px;
   right: 10px;
+  justify-self: end;
+  margin-inline: 29px;
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
+  line-height: 25px;
+  text-transform: uppercase;
 }
 
 .header_rec::after {
   content: "";
   position: absolute;
+  margin-inline-start: 10px;
+  margin-block-start: 7px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
-  margin-block-start: 7px;
-  margin-inline-start: 10px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
-
 }
 
 .header__theme-menu {
@@ -83,10 +81,10 @@ background-attachment: fixed;
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  list-style-type: none;
-  font-size: var(--main-text-size);
   align-content: space-between;
+  gap: 15px;
+  font-size: var(--main-text-size);
+  list-style-type: none;
 }
 
 .header__theme-menu-item {
@@ -96,29 +94,27 @@ background-attachment: fixed;
 .header__theme-menu-button {
   position: relative;
   display: block;
-  color: var(--accent-color);
-  background-color: transparent;
   border: 1px solid transparent;
-  font-family: var(--main-font-family);
-  font-size: var(--main-text-size);
-  text-transform: lowercase;
-  line-height: 18px;
-  cursor: pointer;
   padding: 0 13px;
+  color: var(--accent-color);
+  font-family: var(--main-font-family);
   font-weight: 400;
+  font-size: var(--main-text-size);
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid var(--accent-color);
   width: 70px;
   height: 26px;
-
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--nav-hover-color);
-
 }
 
 .header__theme-menu-button:focus {
@@ -126,99 +122,94 @@ background-attachment: fixed;
 }
 
 .header__theme-menu-button:focus-visible::after {
-    content: '';
-    position: absolute;
-    inline-size: 100%;
-    block-size: 1px;
-    background-color: var(--nav-color);
-    inset-block-end: -2px;
-    inset-inline-start: 0;
+  content: '';
+  position: absolute;
+  background-color: var(--nav-color);
+  inline-size: 100%;
+  block-size: 1px;
+  inset-block-end: -2px;
+  inset-inline-start: 0;
   }
 
-
 .header__logo {
-  font-family: var(--main-font-family);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);;
-  font-weight: bold;
-  line-height: 82.5%;
   color: var(--header-logo-color);
+  font-family: var(--main-font-family);;
+  font-weight: bold;
+  font-size: var(--header-logo-size);
+  line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__text {
-  font-size: var(--main-text-size);
-  font-weight: var(--bold-font-weight);
   color: var(--main-heading-color);
-  line-height: 23.4px;
+  font-weight: var(--bold-font-weight);
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
   background-color: var(--accent-color);
 }
 
 .content {
   display: grid;
-  margin-block-start: 40px;
   gap: 50px;
-
+  margin-block-start: 40px;
 }
 
 .text__paragrath {
-  line-height: 23.4px;
+  line-height: var(--main-line-height);
 }
 
 .content-section {
+  padding: 0 var(--main-gap);
   font-size: var(--main-text-size);
   font-style: normal;
-  line-height: 23.4px;
-  padding: 0 var(--main-gap);
+  line-height: var(--main-line-height);
 }
+
 .title-decor {
   display: block;
-  inline-size: 100%;
-  block-size: fit-content;
-  line-height: 23.4px;
   color: var(--main-bg-color);
-  background-color: var(--accent-color);
-  font-size: var(--main-text-size);
   font-family: var(--main-font-family);
   font-weight: bold;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  background-color: var(--accent-color);
+  inline-size: 100%;
+  block-size: fit-content;
 }
 
 .content-section__title {
-  font-size: var(--main-text-size);
-  color: var(--accent-color);
-  font-weight: 700;
   justify-self: center;
   margin-bottom: 20px;
-  line-height: 23.4px;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
 }
 
 .text-blocks {
-display: grid;
-gap: 20px;
+  display: grid;
+  gap: 20px;
 }
-
 
 .text-block {
   display: grid;
-  gap: 10px;
+  gap: var(--main-gap);
 }
 
 .text-block__title {
   font-weight: 700;
-  line-height: 23.4px;
+  line-height: var(--main-line-height);
 }
-
 
 .text-block__content {
   color: var(--main-text-color);
   font-size: var(--main-text-size);
-  line-height: 23.4px;
-
+  line-height: var(--main-line-height);
 }
 
 .text-block__list-item {
   display: grid;
-  gap: 10px;
-
+  gap: var(--main-gap);
 }
 
 .text-block__list {
@@ -228,13 +219,12 @@ gap: 20px;
 
 .text-block__subtitle {
   font-weight: 400;
-  line-height: 23.4px;
-
+  line-height: var(--main-line-height);
 }
 
 .text-link {
-  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .text-link:hover {
@@ -246,41 +236,39 @@ gap: 20px;
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
   object-fit: cover;
   object-position: center;
-
 }
-.gallery {
-display: grid;
-grid-template-rows: 1fr;
-gap: 10px;
-padding: 0px 10px;
 
+.gallery {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: var(--main-gap);
+  padding: 0px 10px;
 }
 
 .gallery-title {
 
 }
 
-
 .footer {
-  margin-block-start: 40px;
-  height: 100vh;
-  min-height: 668px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  min-height: 668px;
+  margin-block-start: 40px;
 }
 
 .footer__title {
+  color: var(--footer-logo-color);
   font-family: var(--main-font-family, monospace);
   font-weight: bold;
+  font-size: var(--footer-logo-size);
   line-height: 83%;
-  color: var(--footer-logo-color);
   text-transform: lowercase;
   text-shadow: 2px 2px 0 rgba(255, 0, 112, 1);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
