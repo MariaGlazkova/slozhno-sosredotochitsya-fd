@@ -330,17 +330,26 @@ img {
   grid-column: span 2;
 }
 
+
 .ice-cream {
   grid-row: span 2;
 }
+
 
 .tape {
   grid-row: span 2;
 }
 
+
 .street {
   grid-column: span 2;
 }
+
+.gallery_image {
+  height: 100%;
+}
+}
+
 
 
 
