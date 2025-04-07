@@ -1,10 +1,6 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 
 :root.theme-dark {
+  --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --main-bg-color: #000028;
   --main-text-color: #f1b3ce;
@@ -12,14 +8,51 @@
   --nav-hover-color: rgb(255 0 112 / 0.4);
   --main-heading-color: #000028;
   --section-heading-color: #ff0070;
-  --bg-image: url(../images/cover-image-dark.png);
   --header-logo-color: #db00ff;
   --footer-logo-color: #db00ff;
+  --header-theme-menu: 2px;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
 .theme-dark .header_rec {
   display: block;
+}
+
+.theme-dark .header__theme-menu-button_type_light:hover {
+  color: var(--nav-color);
+  border: 1px solid var(--nav-hover-color);
+}
+
+.theme-dark .header__theme-menu-button_type_dark:hover {
+  color: var(--nav-color);
+  border: 1px solid var(--nav-hover-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url(../images/cover-image-dark.png);
+    --accent-color: #ff0070;
+    --main-bg-color: #000028;
+    --main-text-color: #f1b3ce;
+    --nav-color: #ff0070;
+    --nav-hover-color: rgb(255 0 112 / 0.4);
+    --main-heading-color: #000028;
+    --section-heading-color: #ff0070;
+    --header-logo-color: #db00ff;
+    --footer-logo-color: #db00ff;
+    --header-theme-menu: 2px;
+  }
+}
+
+.header_rec {
+  display: block;
+}
+
+.header__theme-menu-button_type_light:hover {
+  color: var(--nav-color);
+  border: 1px solid var(--nav-hover-color);
+}
+
+.header__theme-menu-button_type_dark:hover {
+  color: var(--nav-color);
+  border: 1px solid var(--nav-hover-color);
 }

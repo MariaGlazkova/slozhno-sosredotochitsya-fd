@@ -1,5 +1,6 @@
 
 :root {
+  --bg-image: url(../images/cover-image-dark.png);
   --main-font-family: 'IBM Plex mono', monospace;
   --accent-color: #ff0070;
   --main-bg-color: #000028;
@@ -8,15 +9,20 @@
   --nav-hover-color: rgb(255 0 112 / 0.4);
   --main-heading-color: #000028;
   --section-heading-color: #ff0070;
-  --bg-image: url(../images/cover-image-dark.png);
   --main-gap: 10px;
   --main-text-size: 18px;
   --main-line-height: 23.4px;
+	--text-font-weight: 400;
   --header-logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --header-logo-color: #db00ff;
   --footer-logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --footer-logo-color: #db00ff;
+}
 
-
-
+@media (width >=768px) {
+:root {
+  --main-gap: 20px;
+  --header-logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --footer-logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
 }
