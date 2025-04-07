@@ -17,15 +17,6 @@
   display: block;
 }
 
-.theme-dark .header__theme-menu-button_type_light:hover {
-  color: var(--nav-color);
-  border: 1px solid var(--nav-hover-color);
-}
-
-.theme-dark .header__theme-menu-button_type_dark:hover {
-  color: var(--nav-color);
-  border: 1px solid var(--nav-hover-color);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -45,14 +36,4 @@
 
 .header_rec {
   display: block;
-}
-
-.header__theme-menu-button_type_light:hover {
-  color: var(--nav-color);
-  border: 1px solid var(--nav-hover-color);
-}
-
-.header__theme-menu-button_type_dark:hover {
-  color: var(--nav-color);
-  border: 1px solid var(--nav-hover-color);
 }

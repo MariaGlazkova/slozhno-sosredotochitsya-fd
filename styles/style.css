@@ -96,18 +96,26 @@
   cursor: pointer;
 }
 
-.header__theme-menu-button_active {
-  border: 1px solid var(--nav-color);
-  pointer-events: none;
-}
-
 .header__theme-menu-button:hover {
   border: 1px solid var(--nav-hover-color);
 }
 
 .header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   outline: transparent;
   border-block-end: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--nav-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:active {
+  border: 1px solid var(--nav-color);
 }
 
 .header__logo {
@@ -196,6 +204,10 @@
 
 .text-link:hover {
   border-bottom: 1px solid var(--main-text-color);
+}
+
+.text-link:focus {
+  outline: none;
 }
 
 .text-link:focus-visible {
