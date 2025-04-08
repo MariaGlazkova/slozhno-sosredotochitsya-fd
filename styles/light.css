@@ -6,8 +6,8 @@
   --main-text-color: #353430;
   --nav-color: #353430;
   --nav-hover-color: rgb(50 49 45 / 0.4);
-  --main-heading-color: #353430;
   --section-heading-color: #353430;
+  --main-heading-color: #353430;
   --header-logo-color: #ffc2e6;
   --footer-logo-color: #ffc2e6;
   --header-theme-menu: 8px;
@@ -26,16 +26,17 @@
     --main-text-color: #353430;
     --nav-color: #353430;
     --nav-hover-color: rgb(50 49 45 / 0.4);
-    --main-heading-color: #353430;
     --section-heading-color: #353430;
+    --main-heading-color: #353430;
     --header-logo-color: #ffc2e6;
     --footer-logo-color: #ffc2e6;
     --header-theme-menu: 8px;
   }
-}
 
 .header_rec {
     display: none;
   }
+}
+
 
 
